@@ -1,0 +1,131 @@
+.streamer-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: min(100%, 390px);
+    min-height: 108px;
+    box-sizing: border-box;
+    margin: 1px;
+    padding: 16px;
+    border: 1px solid #e3e8e5;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgb(20 35 28 / 7%);
+    color: #17211c;
+    transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.streamer-card:hover {
+    transform: translateY(-2px);
+    border-color: #b9d8c3;
+    box-shadow: 0 10px 26px rgb(20 35 28 / 11%);
+}
+
+.streamer-avatar-wrap {
+    position: relative;
+    flex: 0 0 64px;
+    width: 64px;
+    height: 64px;
+}
+
+.streamer-avatar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #edf2ee;
+}
+
+.streamer-status-dot {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #a3ada7;
+}
+
+.streamer-card.is-live .streamer-status-dot {
+    background: #20a35b;
+    box-shadow: 0 0 0 3px rgb(32 163 91 / 14%);
+}
+
+.streamer-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.streamer-eyebrow {
+    margin: 0 0 3px;
+    color: #68756d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.streamer-name {
+    overflow: hidden;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.streamer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 7px;
+    color: #247347;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.streamer-link:hover {
+    color: #14552f;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.streamer-link:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid #247347;
+    outline-offset: 3px;
+}
+
+.streamer-status {
+    flex: 0 0 auto;
+    padding: 5px 8px;
+    border-radius: 999px;
+    background: #f0f2f1;
+    color: #5c6861;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.streamer-status.is-live {
+    background: #e6f5eb;
+    color: #176b3b;
+}
+
+@media (max-width: 380px) {
+    .streamer-card {
+        gap: 12px;
+        margin: 8px;
+        padding: 12px;
+    }
+
+    .streamer-avatar-wrap {
+        flex-basis: 52px;
+        width: 52px;
+        height: 52px;
+    }
+}
